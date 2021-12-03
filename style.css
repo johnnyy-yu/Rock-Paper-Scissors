@@ -1,0 +1,106 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    color: white;
+}
+
+img {
+    flex: 1;
+    width: 400px;
+}
+
+button {
+    height: 30px;
+    width: 380px;
+    border-radius: 16px;
+    color: white;
+    font-size: 16px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.scissors-button {
+    background-color: #ef7878
+}
+
+.paper-button {
+    background-color: #5ca945;
+}
+
+.rock-button {
+    background-color: #d2c8ba;
+    ;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #C9F5BD;
+    padding: 0 0 20px;
+    border-radius: 16px;
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rock,
+.paper,
+.scissors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c9F5BD;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 20px;
+    height: 500px;
+    text-align: center;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+.rock-jp {
+    color: #d2c8ba;
+}
+.paper-jp {
+    color:#5ca945;
+}
+
+.scissors-jp {
+    color: #ef7878;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c9F5BD;
+    font-size: 20px;
+    border-radius: 16px;
+    margin: 0 20px;
+    height: 200px;
+    gap: 20px;
+}
+
+
