@@ -1,70 +1,70 @@
 function computerPlay() {
-    const randomInteger = Math.floor(Math.random() * 3);
-    let cpuPlay;
+  const randomInteger = Math.floor(Math.random() * 3);
+  let cpuPlay;
 
-    if (randomInteger == 0) {
-        cpuPlay = "rock";
-    } else if (randomInteger == 1) {
-        cpuPlay = "paper";
-    } else {
-        cpuPlay = "scissors";
-    }
+  if (randomInteger == 0) {
+    cpuPlay = "rock";
+  } else if (randomInteger == 1) {
+    cpuPlay = "paper";
+  } else {
+    cpuPlay = "scissors";
+  }
 
-    return cpuPlay;
+  return cpuPlay;
 }
 
 function playRound(playerSelection, computerSelection = computerPlay()) {
-    if (playerSelection === "rock") {
-        if (computerSelection === "paper") {
-            return "You Lose! Paper beats Rock";
-        } else if (computerSelection === "scissors") {
-            return "You Win! Rock beats Scissors";
-        }
-    } else if (playerSelection === "paper") {
-        if (computerSelection === "scissors") {
-            return "You Lose! Scissors beats Paper";
-        } else if (computerSelection === "rock") {
-            return "You Win! Paper beats Rock";
-        }
-    } else if (playerSelection === "scissors") {
-        if (computerSelection === "rock") {
-            return "You Lose! Rock beats Scissors"
-        } else if (computerSelection === "paper") {
-            return "You Win! Scissors beats Paper!"
-        }
+  if (playerSelection === "rock") {
+    if (computerSelection === "paper") {
+      return "You Lose! Paper beats Rock";
+    } else if (computerSelection === "scissors") {
+      return "You Win! Rock beats Scissors";
     }
+  } else if (playerSelection === "paper") {
+    if (computerSelection === "scissors") {
+      return "You Lose! Scissors beats Paper";
+    } else if (computerSelection === "rock") {
+      return "You Win! Paper beats Rock";
+    }
+  } else if (playerSelection === "scissors") {
+    if (computerSelection === "rock") {
+      return "You Lose! Rock beats Scissors";
+    } else if (computerSelection === "paper") {
+      return "You Win! Scissors beats Paper!";
+    }
+  }
 
-    return "You Tie! Go again!"
-} 
+  return "You Tie! Go again!";
+}
 
 function game(playerSelection) {
-    let results = playRound(playerSelection);
-        div.textContent = results;
-        container.appendChild(div);
+  let results = playRound(playerSelection);
+  div.textContent = results;
+  container.appendChild(div);
 
-    if (results.includes("Win!")) {
-        playerWins += 1;
-    } else if (results.includes("Lose!")) {
-        computerWins += 1;
+  if (results.includes("Win!")) {
+    playerWins += 1;
+  } else if (results.includes("Lose!")) {
+    computerWins += 1;
+  }
+
+  score = "Score is " + playerWins + ":" + computerWins;
+  div2.className = "score";
+  div2.textContent = score;
+  container.appendChild(div2);
+
+  if (playerWins == 5 || computerWins == 5) {
+    if (playerWins > computerWins) {
+      div.textContent = "You are the Winner!";
+    } else {
+      div.textContent = "The Computer is the Winner!";
     }
 
-    score = "Score is " + playerWins + ":" + computerWins;
-    div2.textContent = score;
+    container.appendChild(div);
     container.appendChild(div2);
-
-    if (playerWins == 5 || computerWins == 5) {
-
-        if (playerWins > computerWins) {
-            div.textContent = "You are the Winner!";
-        } else {
-            div.textContent = "The Computer is the Winner!";
-        }
-
-        container.appendChild(div);
-        container.appendChild(div2);
-        playerWins = 0;
-        computerWins = 0;
-    }
+    playerWins = 0;
+    computerWins = 0;
+  }
 }
 
 let playerWins = 0;
@@ -74,21 +74,20 @@ const container = document.querySelector("#results");
 const div = document.createElement("div");
 const div2 = document.createElement("div");
 
-const rockButton = document.querySelector('.rock');
+const rockButton = document.querySelector(".rock-button");
 
 rockButton.addEventListener("click", () => {
-    game("rock");
-})
+  game("rock");
+});
 
-const paperButton = document.querySelector(".paper");
+const paperButton = document.querySelector(".paper-button");
 
 paperButton.addEventListener("click", () => {
-    game("paper")
-})
+  game("paper");
+});
 
-const scissorsButton = document.querySelector(".scissors");
+const scissorsButton = document.querySelector(".scissors-button");
 
 scissorsButton.addEventListener("click", () => {
-    game("scissors")
-})
-
+  game("scissors");
+});

@@ -4,22 +4,23 @@
         <meta charset="utf-8">
         <title>Rock, Paper, Scissors Game</title>
         <link rel="stylesheet" href = "./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <div class="title">
             <div class="title-jp">
                 <h1>じゃんけん</h1>
-                <h5>(janken)</h5>
+                <h5 class="romanji">( Janken )</h5>
             </div>
             <h1>Rock, Paper, Scissors</h1>
         </div>
         <div class="container">
             <div class="rock">
                 <img src="./img/rock.png">
-        <div class="button-and-jp">
-            <div class="rock-jp">ぐう (Guu)</div>
-            <button class="rock-button">Rock</button>
-        </div>
+                <div class="button-and-jp">
+                    <div class="rock-jp">ぐう (Guu)</div>
+                    <button class="rock-button">Rock</button>
+                </div>
             </div>
             <div class="paper">
                 <img src="./img/leaf.png">
@@ -31,7 +32,7 @@
             <div class="scissors">
                 <img src="./img/scissors.png">
                 <div class="button-and-jp">
-                    <div class="scissors-jp">ぱあ (Choki)</div>
+                    <div class="scissors-jp">ちょき (Choki)</div>
                     <button class="scissors-button">Scissors</button>
                 </div>
             </div>
@@ -39,9 +40,15 @@
         <div id="results">
             <div class="results-heading">
                 <div>じゃん拳ぽん!</div>
-                <div>(Janken pon!)</div>
+                <div class="romanji">( Janken pon! )</div>
             </div>
         </div>
     </body>
+    <footer>
+        Made by Jylx
+        <a class="github" href= https://github.com/jylx-x/Rock-Paper-Scissors>
+            <img id="icon" src="./img/GitHub-Mark-Light-32px.png">
+        </a>
+    </footer>
     <script src="script.js"></script>
 </html>
